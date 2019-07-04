@@ -19,12 +19,12 @@
 </html>
 ```
 - 当然，SVG代码也可以写在一个独立文件中，然后用`<img>`、`<object>`、`<embed>`、`<iframe>`等标签插入网页
-···
+```
 <img src="circle.svg">
 <object id="object" data="circle.svg" type="image/svg+xml"></object>
 <embed id="embed" src="icon.svg" type="image/svg+xml">
 <iframe id="iframe" src="icon.svg"></iframe>
-···
+```
 - CSS也可以使用SVG文件
 ```
 .logo {
