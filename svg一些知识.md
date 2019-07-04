@@ -165,3 +165,30 @@
     width="50%" height="50%"/>
 </svg>
 ```
+15. <animate>标签用于产生动画效果。下面代码中，矩形会不断移动，产生动画效果。<animate>的属性含义如下。
+- attributeName：发生动画效果的属性名。
+- from：单次动画的初始值。
+- to：单次动画的结束值。
+- dur：单次动画的持续时间。
+- repeatCount：动画的循环模式。
+```
+<svg width="500px" height="500px">
+  <rect x="0" y="0" width="100" height="100" fill="#feac5e">
+    <animate attributeName="x" from="0" to="500" dur="2s" repeatCount="indefinite" />
+  </rect>
+</svg>
+```
+- 可以在多个属性上面定义动画。
+```
+<animate attributeName="x" from="0" to="500" dur="2s" repeatCount="indefinite" />
+<animate attributeName="width" to="500" dur="2s" repeatCount="indefinite" />
+```
+16. <animate>标签对 CSS 的transform属性不起作用，如果需要变形，就要使用<animateTransform>标签。
+```
+<svg width="500px" height="500px">
+  <rect x="250" y="250" width="50" height="50" fill="#4bc0c8">
+    <animateTransform attributeName="transform" type="rotate" begin="0s" dur="10s" from="0 200 200" to="360 400 400" repeatCount="indefinite" />
+  </rect>
+</svg>
+```
+- 上面代码中，<animateTransform>的效果为旋转（rotate），这时from和to属性值有三个数字，第一个数字是角度值，第二个值和第三个值是旋转中心的坐标。from="0 200 200"表示开始时，角度为0，围绕(200, 200)开始旋转；to="360 400 400"表示结束时，角度为360，围绕(400, 400)旋转。
